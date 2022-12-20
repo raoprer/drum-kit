@@ -1,16 +1,14 @@
-//add listener to all buttons with .drum and make sound on click
+
 for(var i=0; i<document.querySelectorAll(".drum").length;i++){
   document.querySelectorAll(".drum")[i].addEventListener("click", function(){
     makeSound(this.innerHTML);
   })
 }
 
-//to make sound when the keys are pressed
 document.addEventListener("keydown", function(){
   makeSound(event.key);
 });
 
-//function to make sound
 function makeSound(c){
   buttonAnimation(c);
   var loc="sounds/";
